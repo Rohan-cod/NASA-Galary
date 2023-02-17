@@ -14,6 +14,13 @@
 		7EF70056299F60F700F16ADD /* NASA_GalaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70055299F60F700F16ADD /* NASA_GalaryTests.swift */; };
 		7EF70060299F60F700F16ADD /* NASA_GalaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7005F299F60F700F16ADD /* NASA_GalaryUITests.swift */; };
 		7EF70062299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70061299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift */; };
+		7EF70072299F633700F16ADD /* NasaPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70071299F633700F16ADD /* NasaPicture.swift */; };
+		7EF70074299F643800F16ADD /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70073299F643800F16ADD /* ImageDetailView.swift */; };
+		7EF70076299F662B00F16ADD /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70075299F662B00F16ADD /* ImagesViewModel.swift */; };
+		7EF70078299F697100F16ADD /* NasaPictures.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EF70077299F697100F16ADD /* NasaPictures.json */; };
+		7EF7007B299F6D9100F16ADD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7EF7007A299F6D9100F16ADD /* Kingfisher */; };
+		7EF7007D299F817D00F16ADD /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7007C299F817D00F16ADD /* ImageGridView.swift */; };
+		7EF70080299F911700F16ADD /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7007F299F911700F16ADD /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,12 @@
 		7EF7005B299F60F700F16ADD /* NASA GalaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA GalaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF7005F299F60F700F16ADD /* NASA_GalaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryUITests.swift; sourceTree = "<group>"; };
 		7EF70061299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7EF70071299F633700F16ADD /* NasaPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPicture.swift; sourceTree = "<group>"; };
+		7EF70073299F643800F16ADD /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		7EF70075299F662B00F16ADD /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
+		7EF70077299F697100F16ADD /* NasaPictures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NasaPictures.json; sourceTree = "<group>"; };
+		7EF7007C299F817D00F16ADD /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		7EF7007F299F911700F16ADD /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF7007B299F6D9100F16ADD /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +108,11 @@
 		7EF70043299F60F400F16ADD /* NASA Galary */ = {
 			isa = PBXGroup;
 			children = (
+				7EF7007E299F910C00F16ADD /* Extensions */,
+				7EF70070299F632000F16ADD /* Models */,
+				7EF7006E299F630C00F16ADD /* Views */,
+				7EF7006F299F631600F16ADD /* ViewModels */,
 				7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */,
-				7EF70046299F60F400F16ADD /* ContentView.swift */,
 				7EF70048299F60F600F16ADD /* Assets.xcassets */,
 				7EF7004A299F60F600F16ADD /* Preview Content */,
 			);
@@ -127,6 +144,41 @@
 			path = "NASA GalaryUITests";
 			sourceTree = "<group>";
 		};
+		7EF7006E299F630C00F16ADD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EF70046299F60F400F16ADD /* ContentView.swift */,
+				7EF70073299F643800F16ADD /* ImageDetailView.swift */,
+				7EF7007C299F817D00F16ADD /* ImageGridView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7EF7006F299F631600F16ADD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7EF70075299F662B00F16ADD /* ImagesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7EF70070299F632000F16ADD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EF70071299F633700F16ADD /* NasaPicture.swift */,
+				7EF70077299F697100F16ADD /* NasaPictures.json */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EF7007E299F910C00F16ADD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EF7007F299F911700F16ADD /* Globals.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +195,9 @@
 			dependencies = (
 			);
 			name = "NASA Galary";
+			packageProductDependencies = (
+				7EF7007A299F6D9100F16ADD /* Kingfisher */,
+			);
 			productName = "NASA Galary";
 			productReference = 7EF70041299F60F400F16ADD /* NASA Galary.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 7EF70038299F60F400F16ADD;
+			packageReferences = (
+				7EF70079299F6D9100F16ADD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7EF70042299F60F400F16ADD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF7004C299F60F600F16ADD /* Preview Assets.xcassets in Resources */,
+				7EF70078299F697100F16ADD /* NasaPictures.json in Resources */,
 				7EF70049299F60F600F16ADD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF7007D299F817D00F16ADD /* ImageGridView.swift in Sources */,
 				7EF70047299F60F400F16ADD /* ContentView.swift in Sources */,
+				7EF70074299F643800F16ADD /* ImageDetailView.swift in Sources */,
+				7EF70072299F633700F16ADD /* NasaPicture.swift in Sources */,
+				7EF70076299F662B00F16ADD /* ImagesViewModel.swift in Sources */,
+				7EF70080299F911700F16ADD /* Globals.swift in Sources */,
 				7EF70045299F60F400F16ADD /* NASA_GalaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +647,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7EF70079299F6D9100F16ADD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7EF7007A299F6D9100F16ADD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EF70079299F6D9100F16ADD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7EF70039299F60F400F16ADD /* Project object */;
 }
