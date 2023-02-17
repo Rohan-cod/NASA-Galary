@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EF70045299F60F400F16ADD /* NASA_GalaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */; };
+		7EF70047299F60F400F16ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70046299F60F400F16ADD /* ContentView.swift */; };
+		7EF70049299F60F600F16ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF70048299F60F600F16ADD /* Assets.xcassets */; };
+		7EF7004C299F60F600F16ADD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7004B299F60F600F16ADD /* Preview Assets.xcassets */; };
+		7EF70056299F60F700F16ADD /* NASA_GalaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70055299F60F700F16ADD /* NASA_GalaryTests.swift */; };
+		7EF70060299F60F700F16ADD /* NASA_GalaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7005F299F60F700F16ADD /* NASA_GalaryUITests.swift */; };
+		7EF70062299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70061299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EF70052299F60F600F16ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EF70039299F60F400F16ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EF70040299F60F400F16ADD;
+			remoteInfo = "NASA Galary";
+		};
+		7EF7005C299F60F700F16ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EF70039299F60F400F16ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EF70040299F60F400F16ADD;
+			remoteInfo = "NASA Galary";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EF70041299F60F400F16ADD /* NASA Galary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA Galary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryApp.swift; sourceTree = "<group>"; };
+		7EF70046299F60F400F16ADD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7EF70048299F60F600F16ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EF7004B299F60F600F16ADD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7EF70051299F60F600F16ADD /* NASA GalaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA GalaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF70055299F60F700F16ADD /* NASA_GalaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryTests.swift; sourceTree = "<group>"; };
+		7EF7005B299F60F700F16ADD /* NASA GalaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA GalaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF7005F299F60F700F16ADD /* NASA_GalaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryUITests.swift; sourceTree = "<group>"; };
+		7EF70061299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EF7003E299F60F400F16ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF7004E299F60F600F16ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF70058299F60F700F16ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EF70038299F60F400F16ADD = {
+			isa = PBXGroup;
+			children = (
+				7EF70043299F60F400F16ADD /* NASA Galary */,
+				7EF70054299F60F700F16ADD /* NASA GalaryTests */,
+				7EF7005E299F60F700F16ADD /* NASA GalaryUITests */,
+				7EF70042299F60F400F16ADD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EF70042299F60F400F16ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EF70041299F60F400F16ADD /* NASA Galary.app */,
+				7EF70051299F60F600F16ADD /* NASA GalaryTests.xctest */,
+				7EF7005B299F60F700F16ADD /* NASA GalaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EF70043299F60F400F16ADD /* NASA Galary */ = {
+			isa = PBXGroup;
+			children = (
+				7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */,
+				7EF70046299F60F400F16ADD /* ContentView.swift */,
+				7EF70048299F60F600F16ADD /* Assets.xcassets */,
+				7EF7004A299F60F600F16ADD /* Preview Content */,
+			);
+			path = "NASA Galary";
+			sourceTree = "<group>";
+		};
+		7EF7004A299F60F600F16ADD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7EF7004B299F60F600F16ADD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7EF70054299F60F700F16ADD /* NASA GalaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EF70055299F60F700F16ADD /* NASA_GalaryTests.swift */,
+			);
+			path = "NASA GalaryTests";
+			sourceTree = "<group>";
+		};
+		7EF7005E299F60F700F16ADD /* NASA GalaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7EF7005F299F60F700F16ADD /* NASA_GalaryUITests.swift */,
+				7EF70061299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift */,
+			);
+			path = "NASA GalaryUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EF70040299F60F400F16ADD /* NASA Galary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF70065299F60F700F16ADD /* Build configuration list for PBXNativeTarget "NASA Galary" */;
+			buildPhases = (
+				7EF7003D299F60F400F16ADD /* Sources */,
+				7EF7003E299F60F400F16ADD /* Frameworks */,
+				7EF7003F299F60F400F16ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NASA Galary";
+			productName = "NASA Galary";
+			productReference = 7EF70041299F60F400F16ADD /* NASA Galary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7EF70050299F60F600F16ADD /* NASA GalaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF70068299F60F700F16ADD /* Build configuration list for PBXNativeTarget "NASA GalaryTests" */;
+			buildPhases = (
+				7EF7004D299F60F600F16ADD /* Sources */,
+				7EF7004E299F60F600F16ADD /* Frameworks */,
+				7EF7004F299F60F600F16ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EF70053299F60F600F16ADD /* PBXTargetDependency */,
+			);
+			name = "NASA GalaryTests";
+			productName = "NASA GalaryTests";
+			productReference = 7EF70051299F60F600F16ADD /* NASA GalaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7EF7005A299F60F700F16ADD /* NASA GalaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF7006B299F60F700F16ADD /* Build configuration list for PBXNativeTarget "NASA GalaryUITests" */;
+			buildPhases = (
+				7EF70057299F60F700F16ADD /* Sources */,
+				7EF70058299F60F700F16ADD /* Frameworks */,
+				7EF70059299F60F700F16ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EF7005D299F60F700F16ADD /* PBXTargetDependency */,
+			);
+			name = "NASA GalaryUITests";
+			productName = "NASA GalaryUITests";
+			productReference = 7EF7005B299F60F700F16ADD /* NASA GalaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EF70039299F60F400F16ADD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					7EF70040299F60F400F16ADD = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					7EF70050299F60F600F16ADD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7EF70040299F60F400F16ADD;
+					};
+					7EF7005A299F60F700F16ADD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7EF70040299F60F400F16ADD;
+					};
+				};
+			};
+			buildConfigurationList = 7EF7003C299F60F400F16ADD /* Build configuration list for PBXProject "NASA Galary" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EF70038299F60F400F16ADD;
+			productRefGroup = 7EF70042299F60F400F16ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EF70040299F60F400F16ADD /* NASA Galary */,
+				7EF70050299F60F600F16ADD /* NASA GalaryTests */,
+				7EF7005A299F60F700F16ADD /* NASA GalaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EF7003F299F60F400F16ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF7004C299F60F600F16ADD /* Preview Assets.xcassets in Resources */,
+				7EF70049299F60F600F16ADD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF7004F299F60F600F16ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF70059299F60F700F16ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EF7003D299F60F400F16ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF70047299F60F400F16ADD /* ContentView.swift in Sources */,
+				7EF70045299F60F400F16ADD /* NASA_GalaryApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF7004D299F60F600F16ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF70056299F60F700F16ADD /* NASA_GalaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF70057299F60F700F16ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF70060299F60F700F16ADD /* NASA_GalaryUITests.swift in Sources */,
+				7EF70062299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EF70053299F60F600F16ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EF70040299F60F400F16ADD /* NASA Galary */;
+			targetProxy = 7EF70052299F60F600F16ADD /* PBXContainerItemProxy */;
+		};
+		7EF7005D299F60F700F16ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EF70040299F60F400F16ADD /* NASA Galary */;
+			targetProxy = 7EF7005C299F60F700F16ADD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7EF70063299F60F700F16ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7EF70064299F60F700F16ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EF70066299F60F700F16ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NASA Galary/Preview Content\"";
+				DEVELOPMENT_TEAM = AS3UB6V5YF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.NASA-Galary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EF70067299F60F700F16ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NASA Galary/Preview Content\"";
+				DEVELOPMENT_TEAM = AS3UB6V5YF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.NASA-Galary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7EF70069299F60F700F16ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AS3UB6V5YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.NASA-GalaryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA Galary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NASA Galary";
+			};
+			name = Debug;
+		};
+		7EF7006A299F60F700F16ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AS3UB6V5YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.NASA-GalaryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA Galary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NASA Galary";
+			};
+			name = Release;
+		};
+		7EF7006C299F60F700F16ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AS3UB6V5YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.NASA-GalaryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NASA Galary";
+			};
+			name = Debug;
+		};
+		7EF7006D299F60F700F16ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AS3UB6V5YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.NASA-GalaryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NASA Galary";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EF7003C299F60F400F16ADD /* Build configuration list for PBXProject "NASA Galary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF70063299F60F700F16ADD /* Debug */,
+				7EF70064299F60F700F16ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF70065299F60F700F16ADD /* Build configuration list for PBXNativeTarget "NASA Galary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF70066299F60F700F16ADD /* Debug */,
+				7EF70067299F60F700F16ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF70068299F60F700F16ADD /* Build configuration list for PBXNativeTarget "NASA GalaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF70069299F60F700F16ADD /* Debug */,
+				7EF7006A299F60F700F16ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF7006B299F60F700F16ADD /* Build configuration list for PBXNativeTarget "NASA GalaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7006C299F60F700F16ADD /* Debug */,
+				7EF7006D299F60F700F16ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EF70039299F60F400F16ADD /* Project object */;
+}
