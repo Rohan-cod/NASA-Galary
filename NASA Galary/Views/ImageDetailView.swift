@@ -15,40 +15,25 @@ struct ImageDetailView: View {
     let namespace: Namespace.ID
     
     @State private var isDescriptionExpanded: Bool = false
+    @State private var showInfo: Bool = false
     
     var body: some View {
         VStack {
             TabView(selection: $selectedImageIndex) {
                 ForEach(images, id: \.hdurl) { nasaPicture in
                     VStack(alignment: .trailing) {
-                        VStack(spacing: 1) {
-                            HStack {
-                                Spacer()
-                                Text("Date: \(Globals.shared.formatter.string(from: nasaPicture.date))")
-                                    .font(.system(size: 12))
-                                    .fontWeight(.medium)
-                            }
-                            KFImage(URL(string: nasaPicture.hdurl))
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width * 0.9, height: 200)
-                                .clipped()
-                                .cornerRadius(4)
-                                .onTapGesture {
-                                    withAnimation {
-                                        selectedImageIndex = nil
-                                    }
-                                }
-                            if let copyright = nasaPicture.copyright {
-                                HStack {
-                                    Spacer()
-                                    Text("Copyright: \(copyright)")
-                                        .font(.system(size: 12))
-                                        .fontWeight(.medium)
+                        KFImage(URL(string: nasaPicture.hdurl))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: UIScreen.main.bounds.width * 0.9, height: 200)
+                            .clipped()
+                            .cornerRadius(4)
+                            .onTapGesture {
+                                withAnimation {
+                                    selectedImageIndex = nil
                                 }
                             }
-                        }
-                        .padding(.horizontal)
+                            .padding(.horizontal)
                         
                         VStack(alignment: .leading, spacing: nil) {
                             HStack {
@@ -63,21 +48,26 @@ struct ImageDetailView: View {
                                         Image(systemName: "chevron.right")
                                     }
                                 }
-                                .padding(.top, 6)
                                 .tint(.primary)
                                 Text("Explanation")
                                     .font(.title)
                                     .fontWeight(.bold)
-                                    .padding(.top, 8)
                                     .multilineTextAlignment(.leading)
                                 Spacer()
+                                Button {
+                                    withAnimation {
+                                        showInfo = true
+                                    }
+                                } label: {
+                                    Image(systemName: "info.circle")
+                                }
+
                             }
                             if isDescriptionExpanded {
                                 ScrollView(showsIndicators: false) {
                                     Text(nasaPicture.explanation)
                                         .font(.body)
                                         .fontWeight(.regular)
-                                        .padding(.top, 8)
                                         .multilineTextAlignment(.leading)
                                 }
                             }
@@ -88,9 +78,13 @@ struct ImageDetailView: View {
                     .tag(images.firstIndex(where: { pic in
                         pic.hdurl == nasaPicture.hdurl
                     }))
+                    .transition(.opacity)
+                    .alert(images[selectedImageIndex ?? 0].title, isPresented: $showInfo, actions: {
+                        Button("OK", role: .cancel) { }
+                    }, message: { Text("Date: \(Globals.shared.formatter.string(from: images[selectedImageIndex ?? 0].date))\nCopyright: \(images[selectedImageIndex ?? 0].copyright ?? "None")") })
                 }
             }
-            .tabViewStyle(.page)
+            .tabViewStyle(.page(indexDisplayMode: .never))
             .indexViewStyle(.page(backgroundDisplayMode: .never))
         }
         .padding()

@@ -19,42 +19,46 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                ImageGridView(namespace: namespace, images: $imagesViewModel.images, selectedImageIndex: $selectedImageIndex)
-                    .matchedGeometryEffect(id: "Image", in: namespace)
-                    .padding(.horizontal, 3)
-                    .onAppear {
-                        imagesViewModel.fetchImagesFromURL()
-                    }
-                    .alert("Couldn't Load Images!", isPresented: self.$imagesViewModel.showAlert) {
-                        Button("OK", role: .cancel) { }
-                    }
-                    .navigationTitle(Text(selectedImageIndex == nil ? "Nasa Galary" : imagesViewModel.images[selectedImageIndex!].title))
-                    .opacity(selectedImageIndex == nil ? 1 : 0)
-                    .navigationBarTitleDisplayMode(selectedImageIndex == nil ? .automatic : .inline)
-                
-                if selectedImageIndex != nil {
-                    ImageDetailView(images: $imagesViewModel.images, selectedImageIndex: $selectedImageIndex, namespace: namespace)
-                        .matchedGeometryEffect(id: "Image", in: namespace)
-                        .gesture(
-                            DragGesture(minimumDistance: 50)
-                                .onChanged {
-                                    if $0.startLocation.x > $0.location.x {
-                                        if let index = selectedImageIndex, index > 0 {
-                                            withAnimation {
-                                                selectedImageIndex = index - 1
+                if imagesViewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                } else {
+                    ImageGridView(namespace: namespace, images: $imagesViewModel.images, selectedImageIndex: $selectedImageIndex)
+                        .padding(.horizontal, 3)
+                        .transition(.opacity)
+                        .opacity(selectedImageIndex == nil ? 1 : 0)
+                    
+                    if selectedImageIndex != nil {
+                        ImageDetailView(images: $imagesViewModel.images, selectedImageIndex: $selectedImageIndex, namespace: namespace)
+                            .gesture(
+                                DragGesture(minimumDistance: 50)
+                                    .onChanged {
+                                        if $0.startLocation.x > $0.location.x {
+                                            if let index = selectedImageIndex, index > 0 {
+                                                withAnimation {
+                                                    selectedImageIndex = index - 1
+                                                }
                                             }
-                                        }
-                                    } else if $0.startLocation.x > $0.location.x {
-                                        if let index = selectedImageIndex, index < imagesViewModel.images.count - 1 {
-                                            withAnimation {
-                                                selectedImageIndex = index + 1
+                                        } else if $0.startLocation.x > $0.location.x {
+                                            if let index = selectedImageIndex, index < imagesViewModel.images.count - 1 {
+                                                withAnimation {
+                                                    selectedImageIndex = index + 1
+                                                }
                                             }
                                         }
                                     }
-                                }
-                        )
+                            )
+                    }
                 }
             }
+            .onAppear {
+                imagesViewModel.fetchImagesFromURL()
+            }
+            .alert("Couldn't Load Images!", isPresented: self.$imagesViewModel.showAlert) {
+                Button("OK", role: .cancel) { }
+            }
+            .navigationTitle(Text(selectedImageIndex == nil ? "Nasa Galary" : imagesViewModel.images[selectedImageIndex!].title))
+            .navigationBarTitleDisplayMode(selectedImageIndex == nil ? .automatic : .inline)
         }
         
     }

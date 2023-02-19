@@ -108,10 +108,10 @@
 		7EF70043299F60F400F16ADD /* NASA Galary */ = {
 			isa = PBXGroup;
 			children = (
-				7EF7007E299F910C00F16ADD /* Extensions */,
 				7EF70070299F632000F16ADD /* Models */,
 				7EF7006E299F630C00F16ADD /* Views */,
 				7EF7006F299F631600F16ADD /* ViewModels */,
+				7EF7007E299F910C00F16ADD /* Extensions */,
 				7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */,
 				7EF70048299F60F600F16ADD /* Assets.xcassets */,
 				7EF7004A299F60F600F16ADD /* Preview Content */,
