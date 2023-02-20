@@ -16,13 +16,17 @@ enum NASAPictureError: Error {
 public class Service {
     static let shared = Service()
     
-    private let fileName: String? = Globals.shared.fileName
-    private let jsonURL: URL? = Globals.shared.jsonURL
+    private var fileName: String = Globals.shared.fileName
+    private var jsonURL: String = Globals.shared.jsonURL
     
     private init() {}
     
-    func getNASAPicturesFromURL() async throws -> Result<[NasaPicture], Error> {
-        guard let url = jsonURL else {
+    func getNASAPicturesFromURL(_ jsonURL: String? = nil) async throws -> Result<[NasaPicture], Error> {
+        if let url = jsonURL {
+            self.jsonURL = url
+        }
+        
+        guard let url = URL(string: self.jsonURL) else {
             return .failure(NASAPictureError.invalidURL)
         }
         
@@ -35,9 +39,12 @@ public class Service {
         return .success(pictures)
     }
     
-    func getNASAPicturesFromFile() -> Result<[NasaPicture], Error> {
+    func getNASAPicturesFromFile(_ fileName: String? = nil, bundle: Bundle = .main) -> Result<[NasaPicture], Error> {
         do {
-            guard let filePath = Bundle.main.path(forResource: fileName, ofType: "json") else {
+            if let fileName = fileName {
+                self.fileName = fileName
+            }
+            guard let filePath = bundle.path(forResource: self.fileName, ofType: "json") else {
                 return .failure(NASAPictureError.invalidFilePath)
             }
             let fileUrl = URL(fileURLWithPath: filePath)

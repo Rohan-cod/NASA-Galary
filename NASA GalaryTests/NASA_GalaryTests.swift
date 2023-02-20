@@ -16,15 +16,15 @@ final class NASA_GalaryTests: XCTestCase {
         imagesViewModel = ImagesViewModel()
     }
 
-    func testFetchingData() throws {
-        imagesViewModel.getNasaPicturesFromFile()
+    func testFetchingDataFromFile() throws {
+        imagesViewModel.getNasaPicturesFromFile("NasaPicturesWrongFilename")
+        XCTAssertTrue(imagesViewModel.images.isEmpty)
+        XCTAssertTrue(imagesViewModel.showAlert)
+        
+        imagesViewModel.getNasaPicturesFromFile("NasaPicturesTest", bundle: Bundle(for: NASA_GalaryTests.self))
         
         XCTAssertTrue(!imagesViewModel.images.isEmpty)
-    }
-    
-    func testFetchingDataFromURL() async throws {
-        await imagesViewModel.getNasaPicturesFromURL()
-        
-        XCTAssertTrue(!imagesViewModel.images.isEmpty)
+        XCTAssertTrue(imagesViewModel.images[0].date > imagesViewModel.images[1].date)
+        XCTAssertTrue(imagesViewModel.images[0].title == "M33: The Triangulum Galaxy")
     }
 }
