@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0C8BA129A351B000212164 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C8BA029A351B000212164 /* Service.swift */; };
+		7E0C8BA329A3541400212164 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C8BA229A3541400212164 /* Helpers.swift */; };
+		7E0C8BA729A35B3000212164 /* NasaPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C8BA629A35B3000212164 /* NasaPicture.swift */; };
+		7E0C8BA929A35BAF00212164 /* NasaPictures.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E0C8BA829A35BAF00212164 /* NasaPictures.json */; };
 		7EF70045299F60F400F16ADD /* NASA_GalaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */; };
 		7EF70047299F60F400F16ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70046299F60F400F16ADD /* ContentView.swift */; };
 		7EF70049299F60F600F16ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF70048299F60F600F16ADD /* Assets.xcassets */; };
@@ -14,10 +18,8 @@
 		7EF70056299F60F700F16ADD /* NASA_GalaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70055299F60F700F16ADD /* NASA_GalaryTests.swift */; };
 		7EF70060299F60F700F16ADD /* NASA_GalaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7005F299F60F700F16ADD /* NASA_GalaryUITests.swift */; };
 		7EF70062299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70061299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift */; };
-		7EF70072299F633700F16ADD /* NasaPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70071299F633700F16ADD /* NasaPicture.swift */; };
 		7EF70074299F643800F16ADD /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70073299F643800F16ADD /* ImageDetailView.swift */; };
 		7EF70076299F662B00F16ADD /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF70075299F662B00F16ADD /* ImagesViewModel.swift */; };
-		7EF70078299F697100F16ADD /* NasaPictures.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EF70077299F697100F16ADD /* NasaPictures.json */; };
 		7EF7007B299F6D9100F16ADD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7EF7007A299F6D9100F16ADD /* Kingfisher */; };
 		7EF7007D299F817D00F16ADD /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7007C299F817D00F16ADD /* ImageGridView.swift */; };
 		7EF70080299F911700F16ADD /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7007F299F911700F16ADD /* Globals.swift */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E0C8BA029A351B000212164 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7E0C8BA229A3541400212164 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		7E0C8BA629A35B3000212164 /* NasaPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPicture.swift; sourceTree = "<group>"; };
+		7E0C8BA829A35BAF00212164 /* NasaPictures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NasaPictures.json; sourceTree = "<group>"; };
 		7EF70041299F60F400F16ADD /* NASA Galary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA Galary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryApp.swift; sourceTree = "<group>"; };
 		7EF70046299F60F400F16ADD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,10 +57,8 @@
 		7EF7005B299F60F700F16ADD /* NASA GalaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA GalaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF7005F299F60F700F16ADD /* NASA_GalaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryUITests.swift; sourceTree = "<group>"; };
 		7EF70061299F60F700F16ADD /* NASA_GalaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_GalaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7EF70071299F633700F16ADD /* NasaPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPicture.swift; sourceTree = "<group>"; };
 		7EF70073299F643800F16ADD /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		7EF70075299F662B00F16ADD /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
-		7EF70077299F697100F16ADD /* NasaPictures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NasaPictures.json; sourceTree = "<group>"; };
 		7EF7007C299F817D00F16ADD /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 		7EF7007F299F911700F16ADD /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +115,7 @@
 				7EF70070299F632000F16ADD /* Models */,
 				7EF7006E299F630C00F16ADD /* Views */,
 				7EF7006F299F631600F16ADD /* ViewModels */,
-				7EF7007E299F910C00F16ADD /* Extensions */,
+				7EF7007E299F910C00F16ADD /* Utilities */,
 				7EF70044299F60F400F16ADD /* NASA_GalaryApp.swift */,
 				7EF70048299F60F600F16ADD /* Assets.xcassets */,
 				7EF7004A299F60F600F16ADD /* Preview Content */,
@@ -165,18 +169,20 @@
 		7EF70070299F632000F16ADD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7EF70071299F633700F16ADD /* NasaPicture.swift */,
-				7EF70077299F697100F16ADD /* NasaPictures.json */,
+				7E0C8BA629A35B3000212164 /* NasaPicture.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7EF7007E299F910C00F16ADD /* Extensions */ = {
+		7EF7007E299F910C00F16ADD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				7EF7007F299F911700F16ADD /* Globals.swift */,
+				7E0C8BA029A351B000212164 /* Service.swift */,
+				7E0C8BA229A3541400212164 /* Helpers.swift */,
+				7E0C8BA829A35BAF00212164 /* NasaPictures.json */,
 			);
-			path = Extensions;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF7004C299F60F600F16ADD /* Preview Assets.xcassets in Resources */,
-				7EF70078299F697100F16ADD /* NasaPictures.json in Resources */,
+				7E0C8BA929A35BAF00212164 /* NasaPictures.json in Resources */,
 				7EF70049299F60F600F16ADD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,11 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF7007D299F817D00F16ADD /* ImageGridView.swift in Sources */,
+				7E0C8BA129A351B000212164 /* Service.swift in Sources */,
 				7EF70047299F60F400F16ADD /* ContentView.swift in Sources */,
 				7EF70074299F643800F16ADD /* ImageDetailView.swift in Sources */,
-				7EF70072299F633700F16ADD /* NasaPicture.swift in Sources */,
+				7E0C8BA329A3541400212164 /* Helpers.swift in Sources */,
 				7EF70076299F662B00F16ADD /* ImagesViewModel.swift in Sources */,
 				7EF70080299F911700F16ADD /* Globals.swift in Sources */,
+				7E0C8BA729A35B3000212164 /* NasaPicture.swift in Sources */,
 				7EF70045299F60F400F16ADD /* NASA_GalaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

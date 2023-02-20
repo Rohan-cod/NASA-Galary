@@ -15,11 +15,12 @@ struct ImageGridView: View {
     @Binding var images: [NasaPicture]
     
     @Binding var selectedImageIndex: Int?
+    @Binding var imageClicked: Bool
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: [.init(.adaptive(minimum: 100, maximum: .infinity), spacing: 3)], spacing: 3) {
-                ForEach(images, id: \.hdurl) { nasaPicture in
+                ForEach(images, id: \.self) { nasaPicture in
                     KFImage(URL(string: nasaPicture.hdurl))
                         .fade(duration: 2)
                         .resizable()
@@ -27,14 +28,17 @@ struct ImageGridView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                         .clipped()
                         .aspectRatio(1, contentMode: .fit)
-                        .cornerRadius(4)
+                        .cornerRadius(Globals.shared.cornerRadius)
                         .onTapGesture {
                             withAnimation {
                                 selectedImageIndex = images.firstIndex(where: { image in
-                                    image.hdurl == nasaPicture.hdurl
+                                    image == nasaPicture
                                 })
+                                imageClicked = true
                             }
                         }
+                        .accessibilityElement()
+                        .accessibilityLabel("Grid Image: \(nasaPicture.hdurl)")
                 }
             }
         }

@@ -10,24 +10,58 @@ import XCTest
 final class NASA_GalaryUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testAppFlow() throws {
         let app = XCUIApplication()
         app.launch()
+        
+        let trifidNebulaGridImage = app.scrollViews.otherElements.otherElements["Grid Image: https://apod.nasa.gov/apod/image/1912/M20_volskiy.jpg"]
+        XCTAssertTrue(trifidNebulaGridImage.exists)
+        trifidNebulaGridImage.tap()
+        
+        let trifidNebulaDetailImage = app.collectionViews.otherElements["Detail Image: https://apod.nasa.gov/apod/image/1912/M20_volskiy.jpg"]
+        XCTAssertTrue(trifidNebulaDetailImage.exists)
+        trifidNebulaDetailImage.swipeRight(velocity: .slow)
+        
+        let closeButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Close"]
+        XCTAssertTrue(closeButton.exists)
+        closeButton.tap()
+        
+        trifidNebulaGridImage.tap()
+        trifidNebulaDetailImage.swipeLeft(velocity: .slow)
+        closeButton.tap()
+        
+        trifidNebulaGridImage.tap()
+        let infoButton = app.collectionViews.otherElements["Info Button"]
+        XCTAssertTrue(infoButton.exists)
+        infoButton.tap()
+        
+        let trifidNebulaAlert = app.alerts["Messier 20 and 21"]
+        XCTAssertTrue(trifidNebulaAlert.exists)
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let ok = trifidNebulaAlert.scrollViews.otherElements.buttons["OK"]
+        XCTAssertTrue(ok.exists)
+        ok.tap()
+        
+        let explanationOpenButton = app.collectionViews.buttons["Forward"]
+        XCTAssertTrue(explanationOpenButton.exists)
+        explanationOpenButton.tap()
+        
+        let explanation = app.collectionViews.scrollViews.otherElements.otherElements["Explanation"]
+        XCTAssertTrue(explanation.exists)
+        
+        let explanationCloseButton = app.collectionViews.buttons["Go Down"]
+        XCTAssertTrue(explanationCloseButton.exists)
+        explanationCloseButton.tap()
+        XCTAssertFalse(explanation.exists)
+        
+        trifidNebulaDetailImage.swipeDown(velocity: .slow)
+        if closeButton.exists {
+            closeButton.tap()
+        }
+                                        
     }
 
     func testLaunchPerformance() throws {
