@@ -26,11 +26,12 @@ struct ContentView: View {
                 } else {
                     ImageGridView(namespace: namespace, images: $imagesViewModel.images, selectedImageIndex: $selectedImageIndex, imageClicked: $imageClicked)
                         .padding(.horizontal, 3)
-                        .transition(.opacity)
                 }
             }
             .onAppear {
-                imagesViewModel.getNasaPicturesFromFile()
+                withAnimation {
+                    imagesViewModel.getNasaPicturesFromURL()
+                }
             }
             .alert("Couldn't Load Images!", isPresented: self.$imagesViewModel.showAlert) {
                 Button("OK", role: .cancel) { }

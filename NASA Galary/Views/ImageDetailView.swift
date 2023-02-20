@@ -94,7 +94,6 @@ struct ImageDetailView: View {
                         .tag(images.firstIndex(where: { pic in
                             pic == nasaPicture
                         }))
-                        .transition(.opacity)
                         .alert(images[selectedImageIndex ?? 0].title, isPresented: $showInfo, actions: {
                             Button("OK", role: .cancel) { }
                         }, message: { Text(images[selectedImageIndex ?? 0].infoMessage) })
